@@ -19,13 +19,14 @@ void insertion_sort(int array[], int size) {
         int j = i - 1;
     
         while (j > 0) {
-            if (array[j] < array[i]) {
+            if (array[j] > array[i]) {
                 j--;
             }
             else {
                 break;
             }
         }
+        
         
         // At this point, we have got the position where 
         // array[i] should be present at. All other elements
