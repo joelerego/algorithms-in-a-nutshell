@@ -18,10 +18,10 @@ void insertion_sort(int array[], int size) {
         //
         int j = i - 1;
     
-        while (array[j] < array[i] and j >= 0) {
-            j--;
+        while (array[j] < array[i] or j >0) {
+                j--;
         }
-    
+        
         // At this point, we have got the position where 
         // array[i] should be present at. All other elements
         // until array[j] should be bumped up by one position.
