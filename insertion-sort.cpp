@@ -18,8 +18,13 @@ void insertion_sort(int array[], int size) {
         //
         int j = i - 1;
     
-        while (array[j] < array[i] or j >0) {
+        while (j > 0) {
+            if (array[j] < array[i]) {
                 j--;
+            }
+            else {
+                break;
+            }
         }
         
         // At this point, we have got the position where 
