@@ -27,7 +27,6 @@ void insertion_sort(int array[], int size) {
             }
         }
         
-        
         // At this point, we have got the position where 
         // array[i] should be present at. All other elements
         // until array[j] should be bumped up by one position.
