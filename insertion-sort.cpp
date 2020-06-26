@@ -53,5 +53,5 @@ int main() {
     
     insertion_sort(array, size);
 
-    //for (auto i : array) cout << i << endl;
+    for (auto i : array) cout << i << endl;
 }
