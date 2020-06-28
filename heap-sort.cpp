@@ -12,7 +12,7 @@ inline int rightindex(int i) {
     return i * 2 + 2;
 }
 inline int parentindex(int i) {
-    return i / 2;
+    return (i - 2) / 2;
 }
 
 // The following function maintains the max heap property of the 
@@ -51,10 +51,12 @@ void buildheap(int heap[], int size) {
 // The following function performs the heap sorting algorithm.
 //
 void heapsort(int heap[], int size) {    
-    cout << "Inside heap-sort: ";
-    for (int i = 0; i < size; ++i) cout << heap[i] << " ";
-    cout << endl;    
-    // @TODO
+    int last = size - 1;
+    for (int i = last; i > 0; --i) {
+        swap(heap[0], heap[i]);
+        size--;
+        maxheapify(heap, size, 0);
+    }   
 }
 
 int main() {
@@ -66,13 +68,12 @@ int main() {
     cout << endl;    
     
     buildheap(heap, size);
-    cout << "After building max-heap: ";
+    cout << "Max heap is     : ";
     for (auto i : heap) cout << i << " ";
-    cout << endl;  
+    cout << endl;   
     
-    //heapsort(heap, size);
-    
-    cout << "After heap-sort: ";
+    heapsort(heap, size);
+    cout << "After heap-sort : ";
     for (auto i : heap) cout << i << " ";
     cout << endl;
     
